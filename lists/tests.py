@@ -4,9 +4,7 @@ from django.urls import resolve
 from .models import Item, List
 from .views import home_page
 
-
 # Create your tests here.
-
 
 class SmokeTest(TestCase):
 
