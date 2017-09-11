@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="817e3801-009f-472e-91fa-af1b3b9f3725" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/tests/test_forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/templates/base.html" afterPath="$PROJECT_DIR$/lists/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/tests/test_views.py" afterPath="$PROJECT_DIR$/lists/tests/test_views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/views.py" afterPath="$PROJECT_DIR$/lists/views.py" />
     </list>
     <ignored path="geckodriver.log" />
     <ignored path=".idea/" />
@@ -27,7 +27,7 @@
     <SUITE FILE_PATH="coverage/superlists$Test__lists_tests_test_views_ListViewTest_test_validation_errors_are_sent_back_to_home_page_template.coverage" NAME="Test: lists.tests.test_views.ListViewTest.test_validation_errors_are_sent_back_to_home_page_template Coverage Results" MODIFIED="1505153132069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/superlists$Test__functional_tests.coverage" NAME="Test: functional_tests Coverage Results" MODIFIED="1505154648085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/superlists$Test__lists_tests_test_views_NewListTest_test_invalid_list_items_arent_saved.coverage" NAME="Test: lists.tests.test_views.NewListTest.test_invalid_list_items_arent_saved Coverage Results" MODIFIED="1505153277890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/superlists$Test__lists.coverage" NAME="Test: lists Coverage Results" MODIFIED="1505154765908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/superlists$Test__lists.coverage" NAME="Test: lists Coverage Results" MODIFIED="1505161970698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/superlists$Test__lists_tests_test_views_ListViewTest_test_validation_errors_end_up_on_lists_page.coverage" NAME="Test: lists.tests.test_views.ListViewTest.test_validation_errors_end_up_on_lists_page Coverage Results" MODIFIED="1505154877552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/superlists$Test__lists_tests_test_models_ListAndItemModelsTest_test_cannot_save_empty_list_items.coverage" NAME="Test: lists.tests.test_models.ListAndItemModelsTest.test_cannot_save_empty_list_items Coverage Results" MODIFIED="1505152826368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -35,136 +35,114 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lists/apps.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lists/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#44#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lists/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lists/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="443">
-                  <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#50#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/superlists/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/superlists/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/superlists/wsgi.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/manage.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test_forms.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lists/tests/test_forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lists/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lists/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#24#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lists/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/tests/test_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/superlists/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/superlists/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/superlists/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/tests/test_forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,17 +175,17 @@
         <option value="$PROJECT_DIR$/lists/static/base.css" />
         <option value="$PROJECT_DIR$/functional_tests/test_layout_and_styling.py" />
         <option value="$PROJECT_DIR$/superlists/settings.py" />
-        <option value="$PROJECT_DIR$/lists/templates/base.html" />
         <option value="$PROJECT_DIR$/superlists/urls.py" />
-        <option value="$PROJECT_DIR$/lists/tests/test_views.py" />
         <option value="$PROJECT_DIR$/lists/urls.py" />
-        <option value="$PROJECT_DIR$/lists/templates/home.html" />
         <option value="$PROJECT_DIR$/lists/templates/list.html" />
         <option value="$PROJECT_DIR$/lists/tests/test_models.py" />
         <option value="$PROJECT_DIR$/lists/models.py" />
-        <option value="$PROJECT_DIR$/lists/views.py" />
         <option value="$PROJECT_DIR$/lists/forms.py" />
         <option value="$PROJECT_DIR$/lists/tests/test_forms.py" />
+        <option value="$PROJECT_DIR$/lists/tests/test_views.py" />
+        <option value="$PROJECT_DIR$/lists/views.py" />
+        <option value="$PROJECT_DIR$/lists/templates/home.html" />
+        <option value="$PROJECT_DIR$/lists/templates/base.html" />
       </list>
     </option>
   </component>
@@ -513,10 +491,23 @@
       <option name="project" value="LOCAL" />
       <updated>1505155509537</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="created modelform to use in app and show that the form class does the validation we need.">
+      <created>1505161723479</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1505161723479</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="Test__lists - 2017.09.11 at 16h 30m 31s.xml">
+      <configuration name="Test: lists" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__lists - 2017.09.11 at 16h 32m 51s.xml">
+      <configuration name="Test: lists" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
     <history-entry file="Test__lists_tests_test_forms_ItemFormTest - 2017.09.11 at 16h 24m 57s.xml">
       <configuration name="Test: lists.tests.test_forms.ItemFormTest" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
@@ -531,12 +522,6 @@
     </history-entry>
     <history-entry file="Test__lists_tests_test_forms_ItemFormTest - 2017.09.11 at 16h 27m 48s.xml">
       <configuration name="Test: lists.tests.test_forms.ItemFormTest" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__lists_tests_test_forms_ItemFormTest_test_form_renders_item_text_input - 2017.09.11 at 16h 20m 02s.xml">
-      <configuration name="Test: lists.tests.test_forms.ItemFormTest.test_form_renders_item_text_input" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__lists_tests_test_forms_ItemFormTest_test_form_renders_item_text_input - 2017.09.11 at 16h 20m 35s.xml">
-      <configuration name="Test: lists.tests.test_forms.ItemFormTest.test_form_renders_item_text_input" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
     <history-entry file="Test__lists_tests_test_forms_ItemFormTest_test_form_renders_item_text_input - 2017.09.11 at 16h 22m 25s.xml">
       <configuration name="Test: lists.tests.test_forms.ItemFormTest.test_form_renders_item_text_input" configurationId="DjangoTestsConfigurationType" />
@@ -558,7 +543,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40728477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="manage.py@superlists" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29580575" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -610,7 +595,8 @@
     <MESSAGE value="the list view should handle the post instead of an add_item URL.  Had to refactor the urls.py to use the include systax because I messed up the edit in previous chapter." />
     <MESSAGE value="refactor hard_coded urls" />
     <MESSAGE value="use of reverse to get url for a model object.  use in redirects." />
-    <option name="LAST_COMMIT_MESSAGE" value="use of reverse to get url for a model object.  use in redirects." />
+    <MESSAGE value="created modelform to use in app and show that the form class does the validation we need." />
+    <option name="LAST_COMMIT_MESSAGE" value="created modelform to use in app and show that the form class does the validation we need." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -806,16 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/tests/test_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functional_tests/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -851,22 +827,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lists/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-139">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lists/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,16 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/superlists/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -980,6 +930,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding />
         </state>
       </provider>

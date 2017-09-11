@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import resolve
 from django.utils.html import escape
 
+from lists.forms import ItemForm
 from lists.models import Item, List
 from lists.views import home_page
 
@@ -93,6 +94,10 @@ class HomePageTest(TestCase):
         found = resolve('/')
         self.assertEqual(found.func, home_page)
 
+
+    def test_home_page_uses_item_form(self):
+        response = self.client.get('/')
+        self.assertIsInstance(response.context['form'], ItemForm)
 
     def test_home_page_returns_right_template(self):
         # This test is preferred to static text, or even reading the html file
