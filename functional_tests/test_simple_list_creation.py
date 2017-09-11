@@ -1,37 +1,11 @@
-from django.test import LiveServerTestCase
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.keys import Keys
-import time
+
+from .base import FunctionalTest
 
 MAX_WAIT = 10
 
-class NewVisitorTest(LiveServerTestCase):
-
-    def setUp(self):
-        self.browser = webdriver.Firefox()
-
-    def tearDown(self):
-        self.browser.quit()
-
-    def wait_for_row_in_list_table(self, row_text):
-        start_time = time.time()
-        while True:
-            try:
-                table = self.browser.find_element_by_id('id_list_table')
-                rows = table.find_elements_by_tag_name('tr')
-                self.assertIn(row_text, [row.text for row in rows])
-                return
-            except (AssertionError, WebDriverException) as e:
-                if time.time() - start_time > MAX_WAIT:
-                    raise e
-                time.sleep(0.5)
-
-
-    def check_for_row_in_list_table(self, row_text):
-        table = self.browser.find_element_by_id('id_list_table')
-        rows = table.find_elements_by_tag_name('tr')
-        self.assertIn(row_text, [row.text for row in rows])
+class NewVisitorTest(FunctionalTest):
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith has heard about a cool new online to-do app. She goes
@@ -84,7 +58,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         ## We use a new browser session to make sure that no information
         ## of Edith's is coming through from cookies etc
-        self.browser.quit()
+        self.browser.close()
         self.browser = webdriver.Firefox()
 
         # Francis visits the home page.  There is no sign of Edith's
